@@ -313,4 +313,4 @@ app.get('/profile/:name', function(req, res){
   var data = {age: 26, job: 'Developer', hobbies: ['eating', 'drinking', 'fishing', 'playing']};
   res.render('profile.ejs', { person: req.params.name, data: data });
 });
-app.listen(3000);
+app.listen(2000);
