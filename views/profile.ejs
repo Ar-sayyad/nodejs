@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
+  <title>Demo Portal</title>
+
+</head>
+<body>
+<!-- Start wrapper-->
+<div class="container">
+  <% include partials/nav.ejs %>
+<h1>Welcome to Profile of <%= person %></h1>
+<p>Age is <%= data.age %></p>
+<p>Job is <%= data.job %></p>
+<h2>Hobbies</h2>
+<ul>
+<% data.hobbies.forEach(function(item){ %>
+  <li><%= item %> </li>
+<% }); %>
+</ul>
+</div>
+</body>
+</html>

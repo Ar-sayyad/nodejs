@@ -1,0 +1,25 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "node project",
+  "main": "app.js",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "exceljs": "^1.6.3",
+    "express": "^4.16.4",
+    "formidable": "^1.2.1",
+    "ngx-ssrs-reportviewer": "^1.0.2",
+    "nodemailer": "^4.7.0",
+    "xlsx": "^0.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "learn",
+    "ashif"
+  ],
+  "author": "ashif",
+  "license": "ISC"
+}
