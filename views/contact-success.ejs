@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <title>Node Portal</title>
+
+</head>
+<body>
+<!-- Start wrapper-->
+<div class="container">
+  <% include partials/nav.ejs %>
+<h1>Welcome to Contact success</h1>
+<p>Thanks for Getting in Touch</p>
+<p>Thanks you <b><%= data.name %></b> for contacting Us. and Your contact is <b><%= data.contact %></b></p>
+<p>We will Reply at <b><%= data.email %></b></p>
+</div>
+</body>
+</html>

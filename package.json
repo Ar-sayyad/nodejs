@@ -4,6 +4,7 @@
   "description": "node project",
   "main": "app.js",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "ejs": "^2.6.1",
     "exceljs": "^1.6.3",
     "express": "^4.16.4",

@@ -295,8 +295,35 @@ app.listen(3000);
 
 
 //MIDDLEWARE & STATIC FILES
+// var express = require('express');
+// var app = express();
+// app.set('View engine', 'ejs');
+// app.use('/assets', express.static('assets'));
+//
+// app.get('/', function(req, res){
+//   res.render('index.ejs');
+// });
+//
+// app.get('/contact', function(req, res){
+//   res.render('contact.ejs');
+// });
+//
+// app.get('/profile/:name', function(req, res){
+//   //res.send('you requested to see a profile with the name of '+ req.params.name);
+//   var data = {age: 26, job: 'Developer', hobbies: ['eating', 'drinking', 'fishing', 'playing']};
+//   res.render('profile.ejs', { person: req.params.name, data: data });
+// });
+// app.listen(2000);
+
+
+//HTTP POST request
+/*
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
+// parse application/x-www-form-urlencoded
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
 app.set('View engine', 'ejs');
 app.use('/assets', express.static('assets'));
 
@@ -305,7 +332,43 @@ app.get('/', function(req, res){
 });
 
 app.get('/contact', function(req, res){
-  res.render('contact.ejs');
+  res.render('contact.ejs', {qs: req.query});
+});
+
+app.post('/contact', urlencodedParser, function(req, res){
+  console.log(req.body);
+  res.render('contact-success.ejs', {data: req.body});
+});
+
+app.get('/profile/:name', function(req, res){
+  //res.send('you requested to see a profile with the name of '+ req.params.name);
+  var data = {age: 26, job: 'Developer', hobbies: ['eating', 'drinking', 'fishing', 'playing']};
+  res.render('profile.ejs', { person: req.params.name, data: data });
+});
+app.listen(2000);
+*/
+
+//MAKING A TO-DO APP
+var express = require('express');
+var bodyParser = require('body-parser');
+var app = express();
+// parse application/x-www-form-urlencoded
+var urlencodedParser = bodyParser.urlencoded({ extended: false })
+
+app.set('View engine', 'ejs');
+app.use('/assets', express.static('assets'));
+
+app.get('/', function(req, res){
+  res.render('index.ejs');
+});
+
+app.get('/contact', function(req, res){
+  res.render('contact.ejs', {qs: req.query});
+});
+
+app.post('/contact', urlencodedParser, function(req, res){
+  console.log(req.body);
+  res.render('contact-success.ejs', {data: req.body});
 });
 
 app.get('/profile/:name', function(req, res){

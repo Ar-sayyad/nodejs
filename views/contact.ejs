@@ -10,7 +10,25 @@
 <div class="container">
   <% include partials/nav.ejs %>
 <h1>Welcome to Contact</h1>
-
+<form id="contact-form" action="/contact" method="post">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" class="form-control" name="name" value="<%= qs.name %>" placeholder="Name" id="name">
+    </div>
+    <div class="form-group">
+      <label for="contact">Contact:</label>
+      <input type="text" class="form-control" name="contact" value="<%= qs.contact %>" placeholder="Contact" id="contact">
+    </div>
+    <div class="form-group">
+      <label for="email">Email address:</label>
+      <input type="email" class="form-control" name="email" value="<%= qs.email %>" placeholder="Email" id="email">
+    </div>
+    <div class="form-group">
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" name="password" value="<%= qs.password %>" placeholder="Password" id="pwd">
+    </div>
+    <button type="submit" value="submit" class="btn btn-default">Submit</button>
+</form>
 </div>
 </body>
 </html>
